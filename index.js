@@ -1,6 +1,8 @@
 const TelegramBot = require('node-telegram-bot-api');
 //const instagramGetUrl = require("instagram-url-direct");
 const fetch = require("node-fetch")
+const cheerio = require('cheerio');
+
 /*const Instaloader = require('instaloader');
 const fs = require('fs');
 const glob = require('glob');*/
@@ -26,31 +28,35 @@ bot.on('message', async (msg) => {
 // if (msg.text.includes('instagram.com') == true) {
     bot.sendMessage(msg.chat.id, 'Ruk chutiya Download Karke Deta hu 🥱');
   //  const shortcode = link.split('/').filter(Boolean).slice(-1)[0]; //kaam nhi aaya bad me aayega rakhe rakhiye isko
-fetch("https://fastdl.app/api/convert", {
+fetch("https://v3.igdownloader.app/api/ajaxSearch", {
   "headers": {
-    "accept": "application/json, text/plain, */*",
+    "accept": "*/*",
     "accept-language": "en-US,en;q=0.9",
-    "content-type": "application/json",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Microsoft Edge\";v=\"126\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
+    "sec-fetch-site": "same-site"
   },
-  "referrer": "https://fastdl.app/en",
+  "referrer": "https://igdownloader.app/",
   "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": `{\"url\":\"${msg.text}\",\"ts\":1721303156579,\"_ts\":1721203803341,\"_tsc\":0,\"_s\":\"276681a6f4514f96f1fd8339db85589d16bf9686785f1bf0df272beba697779c\"}`,
+  "body": `recaptchaToken=&q=${msg.text}&t=media&lang=en`,
   "method": "POST",
   "mode": "cors",
-  "credentials": "include"
-})  .then(res=> res.json())
+  "credentials": "omit"
+}).then(res=> res.json())
 	  .then(data=> {
                     if(data != undefined ) {
 			console.log(data)
-if(data.url[0].url != "") {
-			bot.sendMessage(msg.chat.id, url[0].url, {
+if(data.data != "") {
+const $ = cheerio.load(htmlContent);
+
+// href attribute ko extract karna
+const downloadLink = $('.download-items__btn a').attr('href');
+bot.sendMessage(msg.chat.id, downloadLink, {
 reply_to_message_id: msg.message_id})
 }
 }
