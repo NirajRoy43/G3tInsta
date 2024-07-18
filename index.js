@@ -52,7 +52,7 @@ fetch("https://v3.igdownloader.app/api/ajaxSearch", {
                     if(data != undefined ) {
 			console.log(data)
 if(data.data != "") {
-const $ = cheerio.load(htmlContent);
+const $ = cheerio.load(data.data);
 
 // href attribute ko extract karna
 const downloadLink = $('.download-items__btn a').attr('href');
