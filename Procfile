@@ -1,1 +1,1 @@
-worker: python G3tInsta.py
+worker: node index.js
