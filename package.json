@@ -1,0 +1,13 @@
+{
+  "name": "maiyaablast",
+  "version": "1.0.0",
+  "description": "blast blast blasst",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+ "dependencies": {
+   "node-telegram-bot-api": "^0.56.0",
+   "instagram-url-direct": "^1.0.13"
+  }
+}
