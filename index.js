@@ -25,7 +25,7 @@ bot.on('message', async (msg) => {
   const messageText = msg.text;
 if (messageText.includes('instagram.com')) {
     bot.sendMessage(msg.chat.id, 'Ruk chutiya Download Karke Deta hu 🥱');
-    const shortcode = link.split('/').filter(Boolean).slice(-1)[0]; //kaam nhi aaya bad me aayega rakhe rakhiye isko
+  //  const shortcode = link.split('/').filter(Boolean).slice(-1)[0]; //kaam nhi aaya bad me aayega rakhe rakhiye isko
 fetch("https://fastdl.app/api/convert", {
   "headers": {
     "accept": "application/json, text/plain, */*",
