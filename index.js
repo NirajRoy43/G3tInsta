@@ -18,7 +18,7 @@ const bot = new TelegramBot(API_TOKEN, { polling: true });
 
 // Command: /start
 bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, 'Hello!!! I can download Instagram reels/stories. Send an Instagram link to download media.');
+    bot.sendMessage(msg.chat.id, 'Link do Link 🔗🤧');
 });
 
 // Detect Instagram links in any message
@@ -52,7 +52,7 @@ bot.on('message', async (msg) => {
                     if(data != undefined ) {
 			console.log(data)
 if (data.url == ""){
-  bot.sendMessage(chatId, 'Are code me kuch maiyaa blast hogya. Developer ko pakad ke puccho kyahua @NemesisRoy');
+  bot.sendMessage(chatId, 'https:// hona chahiye link me 😒');
 }
 if(data.data != undefined) {
 const $ = cheerio.load(data.data);
