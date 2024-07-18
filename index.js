@@ -16,7 +16,7 @@ const bot = new TelegramBot(API_TOKEN, { polling: true });
 
 // Command: /start
 bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, 'Hello!!! I can download Instagram reels/stories. Send an Instagram link to download media.');
+    bot.sendMessage(msg.chat.id, 'Bhaag chutiyaa Hello!!! I can download Instagram reels/stories. Send an Instagram link to download media.');
 });
 
 // Detect Instagram links in any message
@@ -24,7 +24,7 @@ bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const messageText = msg.text;
 if (messageText.includes('instagram.com')) {
-    bot.sendMessage(msg.chat.id, 'Ruko Download Karke Deta hu 🥱');
+    bot.sendMessage(msg.chat.id, 'Ruk chutiya Download Karke Deta hu 🥱');
     const shortcode = link.split('/').filter(Boolean).slice(-1)[0]; //kaam nhi aaya bad me aayega rakhe rakhiye isko
 fetch("https://fastdl.app/api/convert", {
   "headers": {
