@@ -1,1 +1,1 @@
-web: G3tInsta.py
+web: python G3tInsta.py
