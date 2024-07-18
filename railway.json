@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "runtime": "V2",
+    "runtime": "python3.9",
     "startCommand": "python G3tInsta.py",
     "numReplicas": 1,
     "sleepApplication": false,
