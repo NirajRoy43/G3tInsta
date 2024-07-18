@@ -23,7 +23,7 @@ bot.onText(/\/start/, (msg) => {
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const messageText = msg.text;
-if (msg.text.includes('instagram.com') == true) {
+// if (msg.text.includes('instagram.com') == true) {
     bot.sendMessage(msg.chat.id, 'Ruk chutiya Download Karke Deta hu 🥱');
   //  const shortcode = link.split('/').filter(Boolean).slice(-1)[0]; //kaam nhi aaya bad me aayega rakhe rakhiye isko
 fetch("https://fastdl.app/api/convert", {
@@ -69,7 +69,7 @@ reply_to_message_id: msg.message_id})
       bot.sendMessage(chatId, 'Are code me kuch maiyaa blast hogya. developer ko pakad ke pelo @NemesisRoy');
     }
     */
- }
+// }
 });
 /*
 // Function to download Instagram media
