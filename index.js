@@ -59,6 +59,9 @@ const downloadLink = $('.download-items__btn a').attr('href');
 bot.sendVideo(msg.chat.id, downloadLink, {
 reply_to_message_id: msg.message_id})
 }
+else {
+bot.sendMessage(chatId, 'Error!!! Developer ko pakad bhai whi batayega kya hua @NemesisRoy');
+}
 }
 })
    /* 
