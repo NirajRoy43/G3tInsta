@@ -51,16 +51,16 @@ bot.on('message', async (msg) => {
       console.log(data)
                     if(data != undefined ) {
 			console.log(data)
-if(data.data != "") {
+if (data.url == ""){
+  bot.sendMessage(chatId, 'Are code me kuch maiyaa blast hogya. Developer ko pakad ke puccho kyahua @NemesisRoy');
+}
+if(data.data != undefined) {
 const $ = cheerio.load(data.data);
 
 // href attribute ko extract karna
 const downloadLink = $('.download-items__btn a').attr('href');
 bot.sendVideo(msg.chat.id, downloadLink, {
 reply_to_message_id: msg.message_id})
-}
-else {
-bot.sendMessage(chatId, 'Error!!! Developer ko pakad bhai whi batayega kya hua @NemesisRoy');
 }
 }
 })
