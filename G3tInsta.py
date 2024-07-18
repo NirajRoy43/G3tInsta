@@ -1,15 +1,15 @@
-import os
 from pyrogram import Client, filters
 import instaloader
+import os
 import glob
 
-# Instaloader Initialize karenge 
+# Initialize instaloader
 L = instaloader.Instaloader()
 
-# API Values 
-API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
-API_ID = os.getenv("TELEGRAM_API_ID")
-API_HASH = os.getenv("TELEGRAM_API_HASH")
+# Telegram Bot API token
+API_TOKEN = "7476910522:AAFiun8K__9RvmrtXbq3L9GPIbDkQquH9xY"
+API_ID = "15911095"
+API_HASH = "391f344a9957ff3c49d82c2cd5e436af"
 
 # Initialize Pyrogram client
 app = Client("insta_bot", bot_token=API_TOKEN, api_id=API_ID, api_hash=API_HASH)
@@ -55,3 +55,5 @@ def download_instagram_media(client, message):
 
 # Start the bot
 app.run()
+
+
