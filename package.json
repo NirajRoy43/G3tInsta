@@ -8,6 +8,7 @@
   },
  "dependencies": {
    "node-telegram-bot-api": "^0.56.0",
-   "instagram-url-direct": "^1.0.13"
+   "instagram-url-direct": "^1.0.13",
+    "node-fetch": "^2.6.7"
   }
 }
