@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "id": "bot",
+      "name": "G3tInsta",
+      "type": "python-worker",
+      "buildCommand": "pip install -r requirements.txt",
+      "runCommand": "python G3tInsta.py",
+      "env": {
+        "API_TOKEN": {
+          "required": true
+        },
+        "API_ID": {
+          "required": true
+        },
+        "API_HASH": {
+          "required": true
+        }
+      }
+    }
+  ]
+}
