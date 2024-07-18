@@ -14,7 +14,7 @@ const glob = require('glob');*/
 const API_TOKEN = '7476910522:AAFiun8K__9RvmrtXbq3L9GPIbDkQquH9xY';
 
 // Initialize Telegram Bot
-const bot = new TelegramBot(API_TOKEN, { polling: true });
+const bot = new TelegramBot(API_TOKEN, { polling: false });
 
 // Command: /start
 bot.onText(/\/start/, (msg) => {
